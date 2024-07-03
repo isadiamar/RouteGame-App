@@ -2,7 +2,7 @@ def googleServicesJsonFile = file('app/google-services.json.template')
 def googleServicesJsonOutputFile = file('app/google-services.json')
 def googleApiKey = System.getenv('GOOGLE_API_KEY')
 
-googleServicesJsonOutputFile.text = googleServicesJsonFile.text.replace('GOOGLE_API_KEY_PLACEHOLDER', googleApiKey)
+googleServicesJsonOutputFile.text = googleServicesJsonFile.text.replace('GOOGLE_API_KEY', googleApiKey)
 
 
 plugins {
